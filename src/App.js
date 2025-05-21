@@ -71,7 +71,7 @@ const App = () => {
 
   const getAverage = () => {
       // get average number
-      return Math.round(numberList.reduce((a, b) => a + b, 0) / numberList.length);
+      return parseFloat((numberList.reduce((a, b) => a + b, 0) / numberList.length).toFixed(2));
   };
 
   return (
