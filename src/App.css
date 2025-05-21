@@ -1,0 +1,65 @@
+body {
+  @apply bg-white md:bg-gray m-0 p-0;
+}
+
+.app {
+  @apply md:flex justify-center items-center h-screen min-h-full;
+}
+
+.number-block {
+  @apply p-4 bg-white md:rounded-xl md:p-6 md:shadow-lg md:w-[520px] md:max-w-[520px] md:min-h-[400px];
+}
+
+input[type="number"] {
+  @apply border rounded w-full p-3 focus:outline-none focus:shadow-lg block mb-4;
+}
+
+.btn-container {
+  @apply md:flex justify-between mb-4;
+}
+
+.btn {
+  @apply px-4 py-2 mb-4 border rounded text-white text-center w-full md:w-[calc(50%-10px)] hover:shadow-lg transition-all;
+
+  &.btn-add {
+    @apply border-green bg-green;
+  }
+
+  &.btn-remove {
+     @apply border-yellow bg-yellow;
+  }
+
+  &.disable {
+     @apply opacity-50 pointer-events-none;
+  }
+}
+
+.result-block {
+  > div {
+    @apply mb-3 md:flex;
+
+    span {
+      @apply inline-block md:min-w-[210px] md:w-[210px] mr-4;
+    }
+
+    strong {
+      @apply text-dark-gray md:w-full;
+    }
+  }
+}
+
+.error-message {
+  @apply px-4 py-2 rounded border border-red text-red bg-white mb-6;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
